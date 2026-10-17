@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:AssayApp.Controls"
+        x:Class="AssayApp.Views.SplashWindow"
+        Title="Assay"
+        Width="420" Height="420"
+        CanResize="False"
+        SystemDecorations="None"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BrushCream}">
+
+    <Grid RowDefinitions="*,Auto,Auto,32">
+
+        <controls:AssayLogo Grid.Row="0" Width="190" Height="190"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center" />
+
+        <ProgressBar Grid.Row="1" IsIndeterminate="True"
+                     Width="160" Height="4"
+                     HorizontalAlignment="Center"
+                     Margin="0,0,0,16"
+                     Foreground="{StaticResource BrushSage}"
+                     Background="#E3DCCC" />
+
+        <TextBlock Grid.Row="2" Text="Запуск застосунку…"
+                   HorizontalAlignment="Center"
+                   FontSize="13"
+                   Foreground="{StaticResource BrushPlumMuted}"
+                   Margin="0,0,0,16" />
+
+        <TextBlock Grid.Row="3" Text="v1.0.0"
+                   HorizontalAlignment="Center"
+                   FontSize="11"
+                   Foreground="{StaticResource BrushPlumMuted}" />
+
+    </Grid>
+
+</Window>

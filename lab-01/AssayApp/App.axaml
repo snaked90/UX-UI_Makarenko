@@ -1,0 +1,23 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AssayApp.App"
+             RequestedThemeVariant="Light">
+
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+
+    <Application.Resources>
+        <!-- Assay brand palette -->
+        <Color x:Key="ColorCream">#F6F1E7</Color>
+        <Color x:Key="ColorPlum">#43294A</Color>
+        <Color x:Key="ColorSage">#55765A</Color>
+        <Color x:Key="ColorPlumMuted">#6B4C74</Color>
+
+        <SolidColorBrush x:Key="BrushCream" Color="{StaticResource ColorCream}" />
+        <SolidColorBrush x:Key="BrushPlum" Color="{StaticResource ColorPlum}" />
+        <SolidColorBrush x:Key="BrushSage" Color="{StaticResource ColorSage}" />
+        <SolidColorBrush x:Key="BrushPlumMuted" Color="{StaticResource ColorPlumMuted}" />
+    </Application.Resources>
+
+</Application>

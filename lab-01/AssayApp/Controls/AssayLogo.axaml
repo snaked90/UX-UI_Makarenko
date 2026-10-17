@@ -1,0 +1,8 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AssayApp.Controls.AssayLogo">
+    
+    <Image Source="avares://AssayApp/Assets/logo-assay.png"
+           Stretch="Uniform" />
+
+</UserControl>

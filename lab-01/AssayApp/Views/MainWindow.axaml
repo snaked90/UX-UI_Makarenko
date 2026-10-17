@@ -1,0 +1,114 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:AssayApp.Controls"
+        x:Class="AssayApp.Views.MainWindow"
+        Title="Assay"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BrushCream}">
+
+    <Window.Styles>
+        <Style Selector="Button.navItem:disabled /template/ ContentPresenter">
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+        <Style Selector="Button.navItem:disabled">
+            <Setter Property="Opacity" Value="0.85" />
+        </Style>
+    </Window.Styles>
+
+    <Grid ColumnDefinitions="180,*">
+        <Border Grid.Column="0" Background="{StaticResource BrushPlum}">
+            <StackPanel Margin="0,20,0,0" Spacing="2">
+
+                <StackPanel Orientation="Horizontal" Spacing="8"
+                            Margin="16,0,16,24">
+                    
+                    <TextBlock Text="assay" FontSize="16" FontWeight="SemiBold"
+                               VerticalAlignment="Center" Foreground="White" />
+                </StackPanel>
+
+                <Button Classes="navItem" Content="Колекції"
+                        IsEnabled="False" HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Transparent" Foreground="White"
+                        Padding="16,10" />
+                <Button Classes="navItem" Content="Середовища"
+                        IsEnabled="False" HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Transparent" Foreground="White"
+                        Padding="16,10" />
+                <Button Classes="navItem" Content="Історія"
+                        IsEnabled="False" HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Transparent" Foreground="White"
+                        Padding="16,10" />
+                <Button Classes="navItem" Content="Налаштування"
+                        IsEnabled="False" HorizontalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Transparent" Foreground="White"
+                        Padding="16,10" />
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Column="1" RowDefinitions="Auto,Auto,Auto,*" Margin="20">
+
+            <Grid Grid.Row="0" ColumnDefinitions="*,Auto" Margin="0,0,0,20">
+                <TextBlock Grid.Column="0" Text="Новий запит" FontSize="18"
+                           FontWeight="SemiBold" VerticalAlignment="Center"
+                           Foreground="{StaticResource BrushPlum}" />
+
+                <Button Grid.Column="1" Content="About"
+                        Click="OnAboutClick"
+                        Padding="16,6" CornerRadius="6"
+                        Background="{StaticResource BrushSage}"
+                        Foreground="White" />
+            </Grid>
+
+            <Grid Grid.Row="1" ColumnDefinitions="90,*,Auto" Margin="0,0,0,10">
+                <ComboBox Grid.Column="0" SelectedIndex="0"
+                          IsEnabled="False" Margin="0,0,8,0">
+                    <ComboBoxItem Content="GET" />
+                </ComboBox>
+                <TextBox Grid.Column="1" Watermark="https://api.example.com/v1/users"
+                          IsEnabled="False" />
+                <Button Grid.Column="2" Content="Send" Margin="8,0,0,0"
+                        IsEnabled="False" Padding="16,0"
+                        Background="{StaticResource BrushSage}"
+                        Foreground="White" />
+            </Grid>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="4"
+                        Margin="0,0,0,12">
+                <Button Content="Params"
+                        IsEnabled="False" Padding="12,6" Background="Transparent"
+                        BorderThickness="0,0,0,2"
+                        BorderBrush="{StaticResource BrushSage}"
+                        Foreground="{StaticResource BrushPlum}" />
+                <Button Content="Headers"
+                        IsEnabled="False" Padding="12,6" Background="Transparent"
+                        BorderThickness="0"
+                        Foreground="{StaticResource BrushPlumMuted}" />
+                <Button Content="Body"
+                        IsEnabled="False" Padding="12,6" Background="Transparent"
+                        BorderThickness="0"
+                        Foreground="{StaticResource BrushPlumMuted}" />
+                <Button Content="Tests"
+                        IsEnabled="False" Padding="12,6" Background="Transparent"
+                        BorderThickness="0"
+                        Foreground="{StaticResource BrushPlumMuted}" />
+            </StackPanel>
+
+            <Border Grid.Row="3" Background="#FBF8F1" CornerRadius="10"
+                    BorderBrush="{StaticResource BrushSage}" BorderThickness="1">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center" Spacing="4">
+                    <TextBlock Text="Поки що тут нічого немає"
+                               FontSize="14" HorizontalAlignment="Center"
+                               Foreground="{StaticResource BrushPlumMuted}" />
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </Grid>
+
+</Window>

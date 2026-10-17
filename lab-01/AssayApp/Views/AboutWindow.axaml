@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:AssayApp.Controls"
+        x:Class="AssayApp.Views.AboutWindow"
+        Title="Про застосунок"
+        Width="360" Height="450"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        SystemDecorations="Full"
+        Background="{StaticResource BrushCream}">
+
+    <StackPanel Margin="32" Spacing="6" HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+        <controls:AssayLogo Width="120" Height="120"
+                             HorizontalAlignment="Center"
+                             Margin="0,0,0,12" />
+
+        <TextBlock Text="Assay" FontSize="24" FontWeight="SemiBold"
+                   HorizontalAlignment="Center"
+                   Foreground="{StaticResource BrushPlum}" />
+
+        <TextBlock Text="Легкий клієнт для тестування API"
+                   FontSize="12" HorizontalAlignment="Center"
+                   TextAlignment="Center"
+                   Foreground="{StaticResource BrushPlumMuted}"
+                   Margin="0,0,0,16" />
+
+        <Border Height="1" Background="#E3DCCC" Margin="0,0,0,16" />
+
+        <TextBlock Text="Версія: 1.0.0" HorizontalAlignment="Center"
+                   FontSize="13" Foreground="{StaticResource BrushPlum}" />
+        <TextBlock Text="Автор: Макаренко Єгор Андрійович" HorizontalAlignment="Center"
+                   FontSize="13" Foreground="{StaticResource BrushPlum}" />
+        <TextBlock Text="Організація: НАУ «ХАІ» " HorizontalAlignment="Center"
+                   FontSize="13" Foreground="{StaticResource BrushPlum}" />
+        <TextBlock Text="Технологія: AvaloniaUI" HorizontalAlignment="Center"
+                   FontSize="13" Foreground="{StaticResource BrushPlum}" />
+        <TextBlock Text="Рік: 2026" HorizontalAlignment="Center"
+                   FontSize="13" Foreground="{StaticResource BrushPlum}"
+                   Margin="0,0,0,20" />
+
+        <Button Content="Закрити" HorizontalAlignment="Center"
+                Padding="20,6" Background="{StaticResource BrushPlum}"
+                Foreground="White" CornerRadius="6"
+                Click="OnCloseClick" />
+
+    </StackPanel>
+
+</Window>
